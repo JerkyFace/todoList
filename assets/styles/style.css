@@ -1,10 +1,86 @@
+body{
+    /* background: url('../img/bg1.jpg') no-repeat center center fixed;
+    background-size: cover; */
+    background: #1D4350;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #A43931, #1D4350);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #A43931, #1D4350); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    font-family: 'IM Fell Great Primer SC', serif;
+}
+
+h1{
+    background: rgba(174, 228, 242, 0.8);
+    text-align: center;
+    margin: 0;
+    padding: 12px;
+    font-weight: 100;
+}
+
+ul{
+    list-style: none;
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    line-height: 36px;
+}
+
+li:nth-child(2n){
+    box-shadow: 0 0 3px rgba(0,0,0, 0.1);
+    background: rgba(174, 228, 242, 0.1);
+}
+
+#add{
+    display: block;
+    height: 30px;
+    width: 88%;
+    border: none;
+    text-align: left;
+    float: left;
+    padding-left: 2%;
+    background: rgba(255,255,255, 0.4);
+    font-family: 'IM Fell Great Primer SC', serif;
+    font-size: 20px;
+}
+
+#add:focus{
+    outline-color: rgb(145, 198, 211);
+    box-shadow: inset 0 0 3px black;
+}
+
+#add-btn{
+    width: 10%;
+    height: 32px;
+    border: none;
+    background: rgba(174, 228, 242, 0.7);
+    font-family: 'IM Fell Great Primer SC', serif;
+    font-size: 20px;
+}
+
 #container{
-    border: 2px solid black;
-    width: 30%;
-    margin: 0 auto;
+    width: 40%;
+    margin: 100px auto;
+    padding-bottom: 2px;
+    box-shadow: 0 0 6px rgba(0,0,0, 0.1);
+    background: rgba(174, 228, 242, 0.5);
+}
+
+#remove-all{
+    width: 100%;
+    height: 36px;
+    margin-top: 2px;
+    border: none;
+    background: rgba(127, 0, 20, 0.7);
+    float: right;
+    box-shadow: 0px 3px 3px rgba(0,0,0, 0.3);
+    font-family: 'IM Fell Great Primer SC', serif;
+    font-size: 20px;
+    outline-color: rgba(127, 0, 20, 1);
 }
 
 .li-clicked{
     text-decoration: line-through;
-    color: rgba(22,22,22, 0.8);
+    color: rgba(22, 22, 22, 0.5)
 }
