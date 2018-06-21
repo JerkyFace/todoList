@@ -10,15 +10,16 @@ $('ul').on('click', 'span', function (event) {
     })
 })
 
-//listen for "enter" keypress. add new lis
+//listen for "enter" keypress. add new list
 $('input[type="text"]').keypress(function (event) {
     if (event.which === 13) {
-        let text = $(this).val()
+        //let text = $(this).val()
         //add new li
-        if (text != "") {
-            $('ul').append(`<li><span>o</span> &nbsp; ${text} </li>`)
-            $(this).val("")
-        }
+        addNote()
+        // if (text != "" ) {
+        //     $('ul').append(`<li><span><i class="far fa-trash-alt"></i></span> &nbsp; ${text} </li>`)
+        //     $(this).val("")
+        // }
     }
 })
 
@@ -29,3 +30,15 @@ $('#remove-all').on('click', function () {
         $(this).remove()
     })
 })
+
+$('#add-btn').on('click', function(){
+    addNote()
+})
+
+function addNote(){
+    var text = $('input[type="text"]').val()
+    if (text != "" ) {
+        $('ul').append(`<li><span><i class="far fa-trash-alt"></i></span> &nbsp; ${text} </li>`)
+        $('input[type="text"]').val("")
+    }
+}
